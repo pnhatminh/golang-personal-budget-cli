@@ -78,7 +78,7 @@ func CreateBudget(month time.Month, max float32) (*Budget, error) {
 	var newBudget *Budget
 	newBudget = &Budget{Max: max}
 
-	if len(report) > 12 {
+	if len(report) >= 12 {
 		return nil, errReportIsFull
 	}
 
